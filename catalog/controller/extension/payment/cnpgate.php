@@ -113,10 +113,11 @@ class ControllerExtensionPaymentCnpGate extends Controller {
     parse_str($response, $responseFields);
 	
 
-
-	
 	$json = array();
-	$json['redirect'] = $responseFields['redirect-url'];
+
+		
+	if (isset($responseFields['error-message'])){$json['error'] = $responseFields['error-message'];}
+		else{$json['redirect'] = $responseFields['redirect-url'];}
 	$this->response->addHeader('Content-Type: application/json');
 	$this->response->setOutput(json_encode($json));
 
