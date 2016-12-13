@@ -1,6 +1,6 @@
 <?php
 // Text
-$_['text_title']		   = 'Credit Card / Debit Card (CNPGATE)';
+$_['text_title']		   = 'Pay by Credit Card (Visa, MasterCard)';
 $_['text_credit_card']     = 'Credit Card Details';
 
 // Entry
